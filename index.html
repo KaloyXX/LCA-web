@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="LCA TRANSCASH — Transfert d'argent entre Franc CFA et Franc Guinéen via Wave, Orange Money, Djamo et PayCard. Rapide, sûr et transparent sur WhatsApp.">
+  <title>LCA TRANSCASH — Transfert mobile money sur WhatsApp</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <script>
+    (function () {
+      var mq = window.matchMedia('(prefers-color-scheme: light)');
+      function applyTheme() {
+        document.documentElement.classList.toggle('theme-light', mq.matches);
+      }
+      applyTheme();
+      mq.addEventListener('change', applyTheme);
+    })();
+  </script>
+  <link rel="stylesheet" href="css/light.css" media="(prefers-color-scheme: light)">
+  <link rel="stylesheet" href="css/styles.css" media="not (prefers-color-scheme: light)">
+  <link rel="stylesheet" href="css/loader.css">
+</head>
+<body class="is-loading">
+  <div id="page-loader" class="loader" aria-live="polite" aria-busy="true" aria-label="Chargement de LCA TRANSCASH">
+    <div class="loader__inner">
+      <img src="assets/trans.png" alt="" class="loader__logo" width="80" height="80">
+      <p class="loader__name">LCA <span class="loader__accent">TRANSCASH</span></p>
+      <div class="loader__bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <span class="loader__bar-fill"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-shapes" aria-hidden="true">
+    <span class="shape shape--1"></span>
+    <span class="shape shape--2"></span>
+  </div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo" aria-label="LCA TRANSCASH — Accueil">
+        <img src="assets/trans.png" alt="" class="logo__mark" width="56" height="56">
+        <span class="logo__text">LCA <span class="logo__accent">TRANSCASH</span></span>
+      </a>
+      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" aria-label="Navigation principale">
+        <div class="nav__links">
+          <a href="#comment">Comment ça marche</a>
+          <a href="#pourquoi">Pourquoi LCA</a>
+          <a href="#apropos">À propos</a>
+          <a href="#faq">Questions</a>
+        </div>
+        <a href="#pret-a-transferer" class="nav__cta">Transférer maintenant</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="badge">Disponible sur WhatsApp · 8h–23h</p>
+          <h1>Transférez entre FCFA et GNF en quelques messages, <span class="gradient-text">sans quitter la discussion.</span></h1>
+          <p class="hero__lead">
+            LCA TRANSCASH envoie de l'argent entre le Franc CFA et le Franc Guinéen via Wave, Orange Money, Djamo et PayCard.
+            Tu choisis, tu paies par mobile money, c'est livré aussitôt.
+          </p>
+          <div class="hero__actions">
+            <a
+              href="https://wa.me/2250715877715?text=Bonjour%20LCA"
+              class="btn btn--primary"
+              data-wa-bot
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="btn__icon btn__icon--emoji" aria-hidden="true">💬</span>
+              Ouvrir sur WhatsApp
+            </a>
+            <a href="#comment" class="btn btn--ghost">Voir comment ça marche</a>
+          </div>
+          <div class="networks">
+            <span class="networks__label">Tous les moyens de paiement :</span>
+            <div class="networks__list">
+              <span class="network-pill">
+                <img src="assets/wave1.jpg" alt="" width="20" height="20"> Wave
+              </span>
+              <span class="network-pill">
+                <img src="assets/OM-logo.png" alt="" width="20" height="20"> Orange Money
+              </span>
+              <span class="network-pill">
+                <img src="assets/djamo-logo.jpg" alt="" width="20" height="20"> Djamo
+              </span>
+              <span class="network-pill">
+                <img src="assets/paycard.jpg" alt="" width="20" height="20"> PayCard
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="wa-phone" aria-hidden="true">
+            <div class="wa-phone__halo" aria-hidden="true"></div>
+            <div class="wa-phone__device">
+              <span class="wa-phone__btn wa-phone__btn--silent" aria-hidden="true"></span>
+              <span class="wa-phone__btn wa-phone__btn--vol-up" aria-hidden="true"></span>
+              <span class="wa-phone__btn wa-phone__btn--vol-down" aria-hidden="true"></span>
+              <span class="wa-phone__btn wa-phone__btn--power" aria-hidden="true"></span>
+
+              <div class="wa-phone__screen">
+                <div class="wa-top">
+                  <div class="wa-status-bar">
+                    <span class="wa-status-bar__time">09:41</span>
+                    <span class="wa-status-bar__island"></span>
+                    <span class="wa-status-bar__icons">
+                      <svg class="wa-status-bar__signal" viewBox="0 0 15 11" aria-hidden="true">
+                        <rect x="0.5" y="7.5" width="2" height="3.5" rx="0.4" fill="currentColor"/>
+                        <rect x="4" y="5" width="2" height="6" rx="0.4" fill="currentColor"/>
+                        <rect x="7.5" y="2.8" width="2" height="8.2" rx="0.4" fill="currentColor"/>
+                        <rect x="11" y="1" width="2" height="10" rx="0.4" fill="currentColor"/>
+                      </svg>
+                      <svg class="wa-status-bar__wifi" viewBox="0 0 15 11" aria-hidden="true">
+                        <path fill="currentColor" d="M7.5 2.9c-2.7 0-5.2 1-7 2.7l.95.95c1.6-1.5 3.7-2.3 6.05-2.3s4.45.8 6.05 2.3l.95-.95c-1.8-1.7-4.3-2.7-7-2.7z"/>
+                        <path fill="currentColor" d="M7.5 5.6c-1.7 0-3.2.65-4.3 1.75l.95.95c.95-.95 2.15-1.4 3.35-1.4s2.4.45 3.35 1.4l.95-.95c-1.1-1.1-2.6-1.75-4.3-1.75z"/>
+                        <path fill="currentColor" d="M7.5 8c-.85 0-1.6.35-2.15.85l1.05 1.05c.28-.28.65-.45 1.1-.45s.82.17 1.1.45l1.05-1.05c-.55-.5-1.3-.85-2.15-.85z"/>
+                        <circle cx="7.5" cy="10.1" r="0.85" fill="currentColor"/>
+                      </svg>
+                      <svg class="wa-status-bar__battery" viewBox="0 0 28 13" aria-hidden="true"><rect x="1" y="1" width="22" height="11" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.2"/><rect x="24" y="4" width="2.5" height="5" rx="1" fill="currentColor" opacity="0.45"/><rect x="2.5" y="2.5" width="16" height="8" rx="1.5" fill="currentColor"/></svg>
+                    </span>
+                  </div>
+
+                  <header class="wa-chat__header">
+                    <span class="wa-chat__back" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+                    </span>
+                    <div class="wa-chat__avatar-wrap">
+                      <img src="assets/trans.png" alt="" class="wa-chat__avatar" width="36" height="36">
+                    </div>
+                    <div class="wa-chat__info">
+                      <strong>LCA TRANSCASH</strong>
+                      <span class="wa-chat__status">compte professionnel · 8h–23h</span>
+                    </div>
+                    <div class="wa-chat__actions" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27a6.47 6.47 0 0 0 1.48-5.34 6.49 6.49 0 1 0-6.49 6.49 6.47 6.47 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25a1 1 0 0 0 1.42-1.42L15.5 14zm-6 0a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9z"/></svg>
+                      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17 10.5V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3.5l4 4v-11l-4 4z"/></svg>
+                      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg>
+                    </div>
+                  </header>
+                </div>
+
+                <div class="wa-chat__body">
+                  <p class="wa-chat__encrypted">
+                    <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path fill="currentColor" d="M8 1a3 3 0 0 0-3 3v2H4a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1h-1V4a3 3 0 0 0-3-3zm-1 5V4a1 1 0 1 1 2 0v2H7z"/></svg>
+                    Messages chiffrés de bout en bout
+                  </p>
+
+                  <div class="wa-chat__date"><span>Aujourd'hui</span></div>
+
+                  <div class="wa-typing" aria-hidden="true">
+                    <div class="wa-typing__bubble">
+                      <span></span><span></span><span></span>
+                    </div>
+                  </div>
+                </div>
+
+                <footer class="wa-chat__footer" aria-hidden="true">
+                  <span class="wa-chat__emoji">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><circle cx="9" cy="10" r="1" fill="currentColor" stroke="none"/><circle cx="15" cy="10" r="1" fill="currentColor" stroke="none"/></svg>
+                  </span>
+                  <span class="wa-chat__input">Message</span>
+                  <span class="wa-chat__attach">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M16.5 6.5v8a4.5 4.5 0 0 1-9 0v-9a3 3 0 0 1 6 0v7.5a1.5 1.5 0 0 1-3 0V7h-1.5v6a3 3 0 1 0 6 0v-7.5a4.5 4.5 0 0 0-9 0v9a6 6 0 0 0 12 0v-8.5H16.5z"/></svg>
+                  </span>
+                  <span class="wa-chat__mic">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 1 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+                  </span>
+                </footer>
+
+                <div class="wa-home-bar" aria-hidden="true"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="comment" class="section steps">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <p class="section__eyebrow">Simple comme un message</p>
+          <h2>Trois étapes, et c'est réglé.</h2>
+          <p class="section__sub">Pas d'application à installer, pas de compte à créer. Tu discutes avec LCA TRANSCASH comme avec un proche.</p>
+        </div>
+        <ol class="steps__list">
+          <li class="step">
+            <span class="step__num">1</span>
+            <div>
+              <h3>Dis ce que tu veux</h3>
+              <p>Ouvre LCA TRANSCASH sur WhatsApp, choisis « Transfert », tes devises et le montant à envoyer.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step__num">2</span>
+            <div>
+              <h3>Paie en toute simplicité</h3>
+              <p>Règle le montant par mobile money — Wave, Orange Money, Djamo ou PayCard — avec les moyens que tu utilises déjà.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step__num">3</span>
+            <div>
+              <h3>L'argent arrive</h3>
+              <p>Dès le paiement confirmé, le transfert est traité. Tu reçois la confirmation aussitôt sur WhatsApp.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="pourquoi" class="section benefits">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <p class="section__eyebrow">Pourquoi LCA TRANSCASH</p>
+          <h2>Fait pour vos envois entre pays.</h2>
+          <p class="section__sub">Transfère pour toi, pour ta famille ou pour un proche — entre Franc CFA et Franc Guinéen.</p>
+        </div>
+        <div class="benefits__grid">
+          <article class="benefit-card">
+            <span class="benefit-card__icon" aria-hidden="true">
+              <i class="las la-bolt"></i>
+            </span>
+            <h3>Instantané</h3>
+            <p>Le transfert part dès que le paiement est confirmé. Pas d'attente, pas de file.</p>
+          </article>
+          <article class="benefit-card">
+            <span class="benefit-card__icon" aria-hidden="true">
+              <i class="las la-credit-card"></i>
+            </span>
+            <h3>4 moyens de paiement</h3>
+            <p>Wave, Orange Money, Djamo et PayCard. Un seul endroit pour tous vos envois.</p>
+          </article>
+          <article class="benefit-card">
+            <span class="benefit-card__icon" aria-hidden="true">
+              <i class="las la-wallet"></i>
+            </span>
+            <h3>Paiement mobile money</h3>
+            <p>Paie avec les solutions que tu utilises déjà, sans carte bancaire.</p>
+          </article>
+          <article class="benefit-card">
+            <span class="benefit-card__icon" aria-hidden="true">
+              <i class="las la-heart"></i>
+            </span>
+            <h3>Transfert pour un proche</h3>
+            <p>Envoie de l'argent à ta famille ou tes amis, où qu'ils soient entre nos marchés.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section services">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <h2>Moyens de paiement</h2>
+          <p class="section__sub">Envoyez et recevez sur les principales plateformes de la région.</p>
+        </div>
+        <div class="cards cards--4">
+          <article class="card">
+            <div class="card__icon card__icon--wave">
+              <img src="assets/wave1.jpg" alt="Wave" width="48" height="48">
+            </div>
+            <h3>Wave</h3>
+            <p>Transferts fluides vers et depuis votre compte Wave.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon card__icon--orange">
+              <img src="assets/OM-logo.png" alt="Orange Money" width="48" height="48">
+            </div>
+            <h3>Orange Money</h3>
+            <p>Connectez votre portefeuille Orange Money pour des envois sécurisés.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon card__icon--djamo">
+              <img src="assets/djamo-logo.jpg" alt="Djamo" width="48" height="48">
+            </div>
+            <h3>Djamo</h3>
+            <p>Profitez de la rapidité Djamo pour vos opérations transfrontalières.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon card__icon--paycard">
+              <img src="assets/paycard.jpg" alt="PayCard" width="48" height="48">
+            </div>
+            <h3>PayCard</h3>
+            <p>Intégration PayCard pour une couverture élargie de vos besoins.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="apropos" class="section about">
+      <div class="container about__grid">
+        <div class="about__content">
+          <p class="section__eyebrow">À propos</p>
+          <h2>Une passerelle simple entre vos monnaies.</h2>
+          <p>
+            Chez LCA TRANSCASH, notre vision est claire : simplifier le transfert d'argent entre le Franc CFA et le Franc Guinéen.
+            Un simple message WhatsApp suffit, où que vous soyez.
+          </p>
+          <p>
+            Notre mission est de rendre chaque transfert rapide, sûr et accessible à tous, avec une expérience transparente et de confiance.
+            Nous accompagnons nos clients depuis un an avec rapidité et proximité.
+          </p>
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <strong>4</strong>
+            <span>moyens de paiement</span>
+          </div>
+          <div class="stat">
+            <strong>8h–23h</strong>
+            <span>disponible chaque jour</span>
+          </div>
+          <div class="stat">
+            <strong>2</strong>
+            <span>devises : FCFA & GNF</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section faq">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <p class="section__eyebrow">Bon à savoir</p>
+          <h2>Les questions qu'on nous pose.</h2>
+        </div>
+        <div class="faq__grid">
+          <div class="faq__col faq__col--service">
+            <article class="faq__item">
+              <h3 class="faq__question">Combien coûte le service ?</h3>
+              <p>Tu paies le montant du transfert plus de petits frais clairement affichés avant de payer. Aucune surprise.</p>
+            </article>
+            <article class="faq__item">
+              <h3 class="faq__question">Quels moyens de paiement ?</h3>
+              <p>Le paiement se fait par mobile money : Wave, Orange Money, Djamo ou PayCard. Tu confirmes le montant affiché avant de valider.</p>
+            </article>
+            <article class="faq__item">
+              <h3 class="faq__question">Le transfert arrive en combien de temps ?</h3>
+              <p>Immédiatement après la confirmation du paiement. Tu reçois la confirmation sur WhatsApp.</p>
+            </article>
+          </div>
+
+          <div class="faq__col faq__col--pratique">
+            <article class="faq__item">
+              <h3 class="faq__question">Puis-je transférer vers un autre numéro ?</h3>
+              <p>Oui. Tu indiques simplement le compte mobile money qui doit recevoir l'argent, même s'il n'est pas le tien.</p>
+            </article>
+            <article class="faq__item">
+              <h3 class="faq__question">Est-ce que c'est sécurisé ?</h3>
+              <p>Oui. Chaque paiement passe par mobile money, tu confirmes toi-même le montant avant de valider, et rien n'est débité sans ta confirmation.</p>
+            </article>
+            <article class="faq__item">
+              <h3 class="faq__question">Quels sont les horaires de LCA TRANSCASH ?</h3>
+              <p>Tu peux effectuer un transfert tous les jours de 8h à 23h via notre bot WhatsApp.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pret-a-transferer" class="section cta">
+      <div class="container cta__inner">
+        <div class="cta__content">
+          <h2>Prêt à transférer ?</h2>
+          <p>Ouvre LCA TRANSCASH sur WhatsApp et envoie ton premier transfert maintenant.</p>
+          <a
+            href="https://wa.me/2250715877715?text=Bonjour%20LCA"
+            class="btn btn--primary btn--whatsapp"
+            data-wa-bot
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="btn__icon btn__icon--emoji" aria-hidden="true">💬</span>
+            Ouvrir sur WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#" class="logo logo--footer" aria-label="LCA TRANSCASH — Accueil">
+          <img src="assets/trans.png" alt="" class="logo__mark" width="48" height="48">
+          <span class="logo__text">LCA <span class="logo__accent">TRANSCASH</span></span>
+        </a>
+        <p>Une passerelle simple entre vos monnaies. Transfert mobile money rapide, sûr et transparent.</p>
+      </div>
+      <div class="footer__col">
+        <h4>LCA TRANSCASH</h4>
+        <nav aria-label="Liens navigation">
+          <a href="#comment">Comment ça marche</a>
+          <a href="#pourquoi">Pourquoi LCA</a>
+          <a href="#apropos">À propos</a>
+          <a href="#faq">Questions fréquentes</a>
+        </nav>
+      </div>
+      <div class="footer__col">
+        <h4>Contact & Légal</h4>
+        <nav aria-label="Liens contact">
+          <a href="https://wa.me/2250788062035?text=Bonjour%20LCA" data-wa-support target="_blank" rel="noopener noreferrer">WhatsApp (Support)</a>
+          <a href="cgu.html">CGU</a>
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="confidentialite.html">Confidentialité</a>
+        </nav>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>&copy; 2026 LCA TRANSCASH. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="js/site-config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

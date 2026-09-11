@@ -1,0 +1,115 @@
+/* Pages légales — LCA TRANSCASH */
+
+.legal-page {
+  position: relative;
+  z-index: 1;
+  padding: 3.5rem 0 5rem;
+}
+
+.legal-page__inner {
+  max-width: 760px;
+}
+
+.legal-page__head {
+  margin-bottom: 2.5rem;
+}
+
+.legal-page__head h1 {
+  font-family: var(--font-title);
+  font-size: clamp(1.85rem, 4vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-heading, var(--white));
+  margin-bottom: 0.75rem;
+  line-height: 1.15;
+}
+
+.legal-page__meta {
+  font-size: 0.88rem;
+  color: var(--gray-muted);
+  margin-bottom: 1.25rem;
+}
+
+.legal-page__intro {
+  font-size: 1.05rem;
+  color: var(--gray-pearl);
+  line-height: 1.65;
+}
+
+.legal-doc {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.legal-doc__section {
+  background: var(--black-card);
+  border: 1px solid rgba(185, 182, 187, 0.08);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+}
+
+html.theme-light .legal-doc__section {
+  border-color: rgba(39, 37, 40, 0.08);
+}
+
+.legal-doc__section h2 {
+  font-family: var(--font-title);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--orange-signature);
+  margin-bottom: 0.85rem;
+  letter-spacing: -0.01em;
+}
+
+.legal-doc__section p {
+  font-size: 0.95rem;
+  color: var(--gray-pearl);
+  line-height: 1.65;
+  margin-bottom: 0.85rem;
+}
+
+.legal-doc__section p:last-child {
+  margin-bottom: 0;
+}
+
+.legal-doc__section ul,
+.legal-doc__section ol {
+  margin: 0 0 0.85rem 1.25rem;
+  color: var(--gray-pearl);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.legal-doc__section li {
+  margin-bottom: 0.45rem;
+}
+
+.legal-doc__section li:last-child {
+  margin-bottom: 0;
+}
+
+.legal-doc__section a {
+  color: var(--orange-signature);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.legal-doc__section a:hover {
+  color: var(--orange-deep);
+}
+
+.legal-page__back {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .legal-page {
+    padding: 2.5rem 0 3.5rem;
+  }
+
+  .legal-doc__section {
+    padding: 1.35rem;
+  }
+}
