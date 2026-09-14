@@ -102,17 +102,18 @@ function wait(ms) {
 /* Simulations alignées sur webhook/bot.js */
 const WA_MOCK = {
   rate: '14,5',
-  fee: '1',
+  fee: '0,5',
   fcfaAmount: '250 000',
   gnfAmount: '3 625 000',
   scolariteAmount: '150 000',
-  scolariteFeeAmount: '1 500',
-  scolariteTotal: '151 500',
+  scolariteFeeAmount: '750',
+  scolariteTotal: '150 750',
   receiveGnf: '224620000000',
   receiveFcfa: '2250700000000',
   matricule: 'MD26000',
   payFcfaWave: '2250700000000',
   payGnfOrange: '224620000000',
+  payGnfPaycard: '469000000',
 };
 
 function waWelcome() {
@@ -217,12 +218,12 @@ const WA_SCENARIOS = [
       {
         dir: 'in',
         html: '<p>Vous avez choisi : <strong>GNF à FCFA</strong>.</p><p>Quel est votre moyen de paiement ?</p>',
-        replies: ['🟠 ORANGE MONEY'],
+        replies: ['🟠 ORANGE MONEY', '💳 PAYCARD'],
       },
-      waOut('🟠 ORANGE MONEY'),
+      waOut('💳 PAYCARD'),
       {
         dir: 'in',
-        html: '<p>Moyen de paiement : <strong>🟠 ORANGE MONEY</strong>.</p><p>Par quel moyen souhaitez-vous recevoir les FCFA ?</p>',
+        html: '<p>Moyen de paiement : <strong>💳 PAYCARD</strong>.</p><p>Par quel moyen souhaitez-vous recevoir les FCFA ?</p>',
         replies: ['🟠 ORANGE MONEY', '🔵 WAVE', '⚫ DJAMO'],
       },
       waOut('🔵 WAVE'),
@@ -248,8 +249,8 @@ const WA_SCENARIOS = [
         dir: 'in',
         html: [
           '<p>Merci.</p>',
-          `<p>Veuillez effectuer le paiement <strong>🟠 ORANGE MONEY</strong> de <strong>${WA_MOCK.gnfAmount} GNF</strong> sur le numéro suivant :</p>`,
-          `<p><strong>${WA_MOCK.payGnfOrange}</strong></p>`,
+          `<p>Veuillez effectuer le paiement <strong>💳 PAYCARD</strong> de <strong>${WA_MOCK.gnfAmount} GNF</strong> sur le numéro suivant :</p>`,
+          `<p><strong>${WA_MOCK.payGnfPaycard}</strong></p>`,
           '<p>Ensuite, envoyez une capture d’écran comme preuve de paiement.</p>',
         ].join(''),
       },

@@ -581,7 +581,7 @@ a {
   height: 36px;
   border-radius: 50%;
   overflow: hidden;
-  background: #fff;
+  background: #1F1D20;
   flex-shrink: 0;
 }
 
@@ -590,7 +590,7 @@ a {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transform: scale(1.35);
+  transform: scale(1.15);
   display: block;
 }
 
